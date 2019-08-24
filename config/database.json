@@ -1,0 +1,15 @@
+
+{
+  "development": {
+    "host": "127.0.0.1",
+    "user": "postgres",
+    "database": "node_bookshelf_development",
+    "charset": "utf8"
+  },
+  "test": {
+    "host": "127.0.0.1",
+    "user": "postgres",
+    "database": "node_bookshelf_test",
+    "charset": "utf8"
+  }
+}

@@ -9,8 +9,11 @@
   "author": "Yuri Delgado",
   "license": "ISC",
   "dependencies": {
+    "bookshelf": "^0.15.1",
     "express": "^4.17.1",
+    "knex": "^0.19.2",
     "node-fetch": "^2.6.0",
+    "pg": "^7.12.1",
     "redis": "^2.8.0",
     "uuid": "^3.3.3"
   },
