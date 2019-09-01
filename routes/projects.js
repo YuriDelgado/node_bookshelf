@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { User } = require('../models');
+const { Project } = require('../models');
 
 router.get('/', (req, res) => {
-  User.forge().
+  Project.forge().
   fetchAll()
   .then((collection) => {
     res.json({ data: collection.toJSON() })
@@ -14,15 +14,12 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  const { name, email } = req.body;
+  const { name } = req.body;
 
-  User.forge({
-    name: name,
-    email: email
-  })
+  Project.forge({ name: name })
   .save()
-  .then( (user) => {
-    res.json({data: user});
+  .then( (project) => {
+    res.json({data: project});
   })
   .catch( (err) => {
     res.status(500).json({msg: err.message});
@@ -32,10 +29,10 @@ router.post('/', (req, res) => {
 router.get('/:id', (req, res) => {
   const { id } = req.params;
 
-  User.where({id: id})
+  Project.where({id: id})
   .fetch()
-  .then((user) => {
-    res.json({ data: user.toJSON() })
+  .then((project) => {
+    res.json({ data: project.toJSON() })
   })
   .catch((err) => {
     res.status(500).json({ msg: err.message });
