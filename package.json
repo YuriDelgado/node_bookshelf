@@ -9,7 +9,7 @@
   "author": "Yuri Delgado",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "bookshelf": "^0.15.1",
     "express": "^4.17.1",
     "knex": "^0.19.2",
